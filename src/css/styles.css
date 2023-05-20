@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.field {
+  margin: 0 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
