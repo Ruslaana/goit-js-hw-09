@@ -1,4 +1,9 @@
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
+import Notiflix from 'notiflix';
+
 const datetimePicker = document.querySelector('#datetime-picker');
+console.log(datetimePicker);
 const startButton = document.querySelector('[data-start]');
 const daysElement = document.querySelector('[data-days]');
 const hoursElement = document.querySelector('[data-hours]');
@@ -6,6 +11,18 @@ const minutesElement = document.querySelector('[data-minutes]');
 const secondsElement = document.querySelector('[data-seconds]');
 
 let countdownInterval;
+
+const options = {
+  enableTime: true,
+  time_24hr: true,
+  defaultDate: new Date(),
+  minuteIncrement: 1,
+  onClose(selectedDates) {
+    console.log(selectedDates[0]);
+  },
+};
+
+flatpickr(datetimePicker, options);
 
 function convertMs(ms) {
   const second = 1000;
